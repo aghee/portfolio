@@ -22,9 +22,9 @@ class TagAdmin(admin.ModelAdmin):
 class ContactAdmin(admin.ModelAdmin):
     list_display=(
         "name",
+        "phone_number",
         "email",
         "organization",
-        "message"
     )
     search_fields=("name","email")
 
