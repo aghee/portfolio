@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tag, Project, ProjectImage
+from .models import Tag, Project, ProjectImage,Contact
 
 # Register your models here.
 class ProjectImageInline(admin.TabularInline):
@@ -22,3 +22,4 @@ class TagAdmin(admin.ModelAdmin):
 admin.site.register(Tag,TagAdmin)
 admin.site.register(Project,ProjectAdmin)
 admin.site.register(ProjectImage)
+admin.site.register(Contact)
