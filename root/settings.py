@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import dj_database_url
 
 load_dotenv()
 
@@ -79,23 +80,26 @@ WSGI_APPLICATION = 'root.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'portfolio',
+#         'USER':'postgres',
+#         'PASSWORD':os.environ.get('DB_PASSWORD'),
+#         'HOST':'localhost',
+#         'PORT':'5432'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfolio',
-        'USER':'postgres',
-        'PASSWORD':os.environ.get('DB_PASSWORD'),
-        'HOST':'localhost',
-        'PORT':'5432'
-    }
-}
+#postgres://portfolio_db_chcj_user:D7ZA1d1FETpwqjK57DevdVT42tsk7Gb1@dpg-cpcsnqu74orc73f53mvg-a.oregon-postgres.render.com/portfolio_db_chcj
+DATABASES["default"]=dj-database-url.parse("postgres://portfolio_db_chcj_user:D7ZA1d1FETpwqjK57DevdVT42tsk7Gb1@dpg-cpcsnqu74orc73f53mvg-a.oregon-postgres.render.com/portfolio_db_chcj")
 
 
 # Password validation
