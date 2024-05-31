@@ -150,6 +150,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL="/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,"media")
 
+'''
 #AWC CONFIGURATION
 AWS_ACCESS_KEY_ID =os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY=os.environ.get('AWS_SECRET_ACCESS_KEY')
@@ -169,4 +170,6 @@ STORAGES={
         "BACKEND":"storages.backends.s3boto3.S3StaticStorage",
     },
 }
+
+'''
 
