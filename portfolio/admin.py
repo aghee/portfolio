@@ -19,7 +19,17 @@ class TagAdmin(admin.ModelAdmin):
     list_display=("name",)
     search_fields=("name",)
 
+class ContactAdmin(admin.ModelAdmin):
+    list_display=(
+        "name",
+        "email",
+        "organization",
+        "message"
+    )
+    search_fields=("name","email")
+
+
 admin.site.register(Tag,TagAdmin)
 admin.site.register(Project,ProjectAdmin)
 admin.site.register(ProjectImage)
-admin.site.register(Contact)
+admin.site.register(Contact,ContactAdmin)
