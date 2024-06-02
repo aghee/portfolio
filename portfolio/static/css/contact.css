@@ -4,5 +4,14 @@
     background-color: #fff;
     -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
     box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    text-align: center;
 
+}
+
+.display-4 {
+    margin-bottom: 1rem;
+}
+
+.p {
+    text-align: justify;
 }
