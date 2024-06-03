@@ -17,7 +17,7 @@
         <p><a href="{{ project.link }}" style="color: cornflowerblue;" target="_blank">Project Link</a></p>
         <p><a href="{{ project.link }}" style="color: cornflowerblue;" target="_blank">Github</a></p>
         </div>
-        <p>{{ project.description }}</p>
+        <p>{{ project.description|linebreaks }}</p>
         <a href="{% url 'home'%}" style="color: cornflowerblue;">Go back</a>
         </div>
         <div class="carousel">
