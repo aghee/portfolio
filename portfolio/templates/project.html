@@ -14,7 +14,7 @@
     <div class="project-info">
         <h1>{{ project.title }}</h1>
         <div class="container">
-        <p><a href="project.app_link" style="color: cornflowerblue;" target="_blank">Visit app</a></p>
+        <p><a href="{{ project.app_link }}" style="color: cornflowerblue;" target="_blank">Visit app</a></p>
         <p><a href="{{ project.github_link }}" style="color: cornflowerblue;" target="_blank">Github</a></p>
         </div>
         <p>{{ project.description|linebreaks }}</p>
