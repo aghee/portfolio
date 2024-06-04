@@ -14,8 +14,8 @@
     <div class="project-info">
         <h1>{{ project.title }}</h1>
         <div class="container">
-        <p><a href="https://task-tracker-e0bs.onrender.com" style="color: cornflowerblue;" target="_blank">Visit app</a></p>
-        <p><a href="{{ project.link }}" style="color: cornflowerblue;" target="_blank">Github</a></p>
+        <p><a href="project.app_link" style="color: cornflowerblue;" target="_blank">Visit app</a></p>
+        <p><a href="{{ project.github_link }}" style="color: cornflowerblue;" target="_blank">Github</a></p>
         </div>
         <p>{{ project.description|linebreaks }}</p>
         <a href="{% url 'home'%}" style="color: cornflowerblue;">Go back</a>
