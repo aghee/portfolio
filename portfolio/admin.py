@@ -9,7 +9,8 @@ class ProjectImageInline(admin.TabularInline):
 class ProjectAdmin(admin.ModelAdmin):
     list_display=(
         "title",
-        "link"
+        "github_link",
+        "app_link"
     )
     inlines=[ProjectImageInline]
     search_fields=("title", "description")

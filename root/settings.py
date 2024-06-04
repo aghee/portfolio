@@ -102,6 +102,7 @@ DATABASES = {
 
 #postgres://portfolio_db_chcj_user:D7ZA1d1FETpwqjK57DevdVT42tsk7Gb1@dpg-cpcsnqu74orc73f53mvg-a.oregon-postgres.render.com/portfolio_db_chcj
 DATABASES["default"]=dj_database_url.parse("postgres://portfolio_db_chcj_user:D7ZA1d1FETpwqjK57DevdVT42tsk7Gb1@dpg-cpcsnqu74orc73f53mvg-a/portfolio_db_chcj")
+# DATABASES["default"]=dj_database_url.parse("postgres://portfolio_db_chcj_user:D7ZA1d1FETpwqjK57DevdVT42tsk7Gb1@dpg-cpcsnqu74orc73f53mvg-a.oregon-postgres.render.com/portfolio_db_chcj")
 
 
 # Password validation
