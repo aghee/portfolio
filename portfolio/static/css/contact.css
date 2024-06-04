@@ -7,6 +7,9 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 
 }
 
@@ -14,6 +17,6 @@
     margin-bottom: 1rem;
 }
 
-.p {
+.h4 {
     text-align: justify;
 }
