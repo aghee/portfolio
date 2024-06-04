@@ -22,7 +22,6 @@
             <div class="project" data-name="{{ project.title|lower }}" data-tags="{{ project.tags.all|join:', '|lower }}">
                 <h2><a href="{% url 'project' project.id %}">{{ project.title }}</a></h2>
                 <p>{{ project.description|linebreaks }}</p>
-                <p><b> Tech Stack:</b> {{project.tags.all|join:', '}}</p>
                 </div>
             {% endfor %}
             </div>
