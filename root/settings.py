@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolio-12d2.onrender.com']
+ALLOWED_HOSTS = ['*']
+# portfolio-12d2.onrender.com
 
 
 # Application definition
@@ -89,19 +90,21 @@ DATABASES = {
 }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'portfolio',
-#         'USER':'postgres',
-#         'PASSWORD':os.environ.get('DB_PASSWORD'),
-#         'HOST':'localhost',
-#         'PORT':'5432'
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfolio',
+        'USER':'postgres',
+        'PASSWORD':os.environ.get('DB_PASSWORD'),
+        'HOST':'localhost',
+        'PORT':'5432'
+    }
+}
 
 #postgres://portfolio_db_chcj_user:D7ZA1d1FETpwqjK57DevdVT42tsk7Gb1@dpg-cpcsnqu74orc73f53mvg-a.oregon-postgres.render.com/portfolio_db_chcj
-DATABASES["default"]=dj_database_url.parse("postgres://portfolio_db_chcj_user:D7ZA1d1FETpwqjK57DevdVT42tsk7Gb1@dpg-cpcsnqu74orc73f53mvg-a/portfolio_db_chcj")
+
+# DATABASES["default"]=dj_database_url.parse("postgres://portfolio_db_chcj_user:D7ZA1d1FETpwqjK57DevdVT42tsk7Gb1@dpg-cpcsnqu74orc73f53mvg-a/portfolio_db_chcj")
+
 # DATABASES["default"]=dj_database_url.parse("postgres://portfolio_db_chcj_user:D7ZA1d1FETpwqjK57DevdVT42tsk7Gb1@dpg-cpcsnqu74orc73f53mvg-a.oregon-postgres.render.com/portfolio_db_chcj")
 
 

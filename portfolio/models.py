@@ -23,6 +23,28 @@ class ProjectImage(models.Model):
 
     def __str__(self):
         return f"{self.project.title} Image"
+class DataTag(models.Model):
+    name=models.CharField(max_length=100,unique=True)
+
+    def __str__(self):
+        return self.name
+
+class DataProject(models.Model):
+    title=models.CharField(max_length=200)
+    description=models.TextField()
+    tags=models.ManyToManyField(DataTag,related_name="dproject")
+    github_link=models.URLField(max_length=200,blank=True)
+    app_link=models.URLField(max_length=200,blank=True)
+
+    def __str__(self):
+        return self.title
+
+class DataProjectImage(models.Model):
+    dproject=models.ForeignKey(DataProject,related_name="dimages",on_delete=models.CASCADE)
+    image=models.ImageField(upload_to="dproject_images/")
+
+    def __str__(self):
+        return f"{self.dproject.title} Image"
 class Contact(models.Model):
     name=models.CharField(max_length=100,null=False)
     organization=models.CharField(max_length=100,null=True,blank=True)

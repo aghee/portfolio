@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from .models import Project,Tag
+from .models import Project,Tag,DataProject,DataTag
 from .forms import ContactForm
 
 
@@ -12,6 +12,22 @@ def home(request):
         "tags":tags
     }
     return render(request,"home.html",context)
+
+def dataprojects(request):
+    dprojects=DataProject.objects.all()
+    datatags=DataTag.objects.all()
+    context={
+        "dprojects":dprojects,
+        "datatags":datatags
+    }
+    return render(request,"dataprojects.html",context)
+
+def dproject(request,pk):
+    dproject=DataProject.objects.get(id=pk)
+    context={
+        "dproject":dproject
+    }
+    return render(request,"dproject.html",context)
 
 def contact(request):
     form=ContactForm()
