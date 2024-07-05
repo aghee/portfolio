@@ -15,4 +15,4 @@ then
 fi
 
 pip install -r requirements.txt
-python3.11 manage.py collectstatic
+python manage.py collectstatic
