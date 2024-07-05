@@ -6,12 +6,12 @@ then
     export PATH=$PATH:~/.local/bin
 fi
 
-# Install Python 3.11 if not already installed
-if ! command -v python3.11 &> /dev/null
+# Install Python if not already installed
+if ! command -v python &> /dev/null
 then
-    echo "python3.11 not found, installing..."
+    echo "python not found, installing..."
     sudo apt-get update
-    sudo apt-get install -y python3.11
+    sudo apt-get install -y python
 fi
 
 pip install -r requirements.txt
